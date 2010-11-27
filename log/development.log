@@ -1,0 +1,1086 @@
+
+
+Started GET "/ablums" for 127.0.0.1 at 2010-11-26 18:24:13 -0600
+
+Mysql2::Error (Can't connect to MySQL server on 'localhost' (10061)):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (212.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (431.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:24:25 -0600
+
+Mysql2::Error (Can't connect to MySQL server on 'localhost' (10061)):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (52.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (105.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:29:58 -0600
+
+Mysql2::Error (Unknown database 'photo-gallery_development'):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:30:43 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (3.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 696ms (Views: 60.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/javascripts/jquery-1.4.2" for 127.0.0.1 at 2010-11-26 18:30:53 -0600
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-1.4.2"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:31:23 -0600
+  Processing by AlbumsController#new as HTML
+Rendered albums/_form.html.erb (78.0ms)
+Rendered albums/new.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 160ms (Views: 131.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/jquery-1.4.2" for 127.0.0.1 at 2010-11-26 18:31:23 -0600
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-1.4.2"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2010-11-26 18:31:45 -0600
+  Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "album"=>{"name"=>"Album1"}, "commit"=>"Create Album"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (7.0ms)[0m  describe `albums`
+  [1m[36mAREL (18.0ms)[0m  [1mINSERT INTO `albums` (`idalbums`, `name`) VALUES (NULL, 'Album1')[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/albums/1
+Completed 302 Found in 340ms
+
+
+Started GET "/albums/1" for 127.0.0.1 at 2010-11-26 18:31:47 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed   in 51ms
+
+NoMethodError (undefined method `eq' for nil:NilClass):
+  app/controllers/albums_controller.rb:16:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.0ms)
+
+
+Started GET "/albums/1" for 127.0.0.1 at 2010-11-26 18:33:07 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed   in 71ms
+
+ActiveRecord::RecordNotFound (Couldn't find Album without an ID):
+  app/controllers/albums_controller.rb:16:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:33:22 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (146.0ms)
+Completed   in 247ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"albums", :id=>#<Album idalbums: 1, name: "Album1">}):
+    11: <% @albums.each do |album| %>
+    12:   <tr>
+    13:     <td><%= album.name %></td>
+    14:     <td><%= link_to 'Show', album %></td>
+    15:     <td><%= link_to 'Edit', edit_album_path(album) %></td>
+    16:     <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+    17:   </tr>
+  app/views/albums/index.html.erb:14:in `block in _app_views_albums_index_html_erb__329958849_32879856__992859842'
+  app/views/albums/index.html.erb:11:in `each'
+  app/views/albums/index.html.erb:11:in `_app_views_albums_index_html_erb__329958849_32879856__992859842'
+  app/controllers/albums_controller.rb:7:in `index'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:37:06 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT `albums`.* FROM `albums`
+Rendered albums/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 104ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/jquery-1.4.2" for 127.0.0.1 at 2010-11-26 18:37:06 -0600
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-1.4.2"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:37:19 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (3.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 85ms (Views: 57.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/javascripts/jquery-1.4.2" for 127.0.0.1 at 2010-11-26 18:37:19 -0600
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-1.4.2"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:41:41 -0600
+  Processing by AlbumsController#new as HTML
+Rendered albums/_form.html.erb (8.0ms)
+Rendered albums/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 149ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/jquery-1.4.2" for 127.0.0.1 at 2010-11-26 18:41:42 -0600
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-1.4.2"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2010-11-26 18:41:46 -0600
+  Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "album"=>{"name"=>"Album2"}, "commit"=>"Create Album"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (13.0ms)[0m  [1mdescribe `albums`[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO `albums` (`name`) VALUES ('Album2')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/albums/2
+Completed 302 Found in 80ms
+
+
+Started GET "/albums/2" for 127.0.0.1 at 2010-11-26 18:41:46 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 2) LIMIT 1
+Rendered albums/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 122ms (Views: 77.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascripts/jquery-1.4.2" for 127.0.0.1 at 2010-11-26 18:41:47 -0600
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-1.4.2"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:41:50 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (5.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 140ms (Views: 95.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/javascripts/jquery-1.4.2" for 127.0.0.1 at 2010-11-26 18:41:50 -0600
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-1.4.2"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:43:21 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 217ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:43:28 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (2.0ms)[0m  SELECT `albums`.* FROM `albums`
+Rendered albums/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 108ms (Views: 55.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:44:32 -0600
+
+SyntaxError (C:/Users/Yuriy/Documents/NetBeansProjects/Photo-Gallery/app/controllers/albums_controller.rb:89: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:44:43 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 58ms
+
+NameError (undefined local variable or method `root' for #<AlbumsController:0x469cd88>):
+  app/controllers/albums_controller.rb:31:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (77.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:45:01 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 39ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/albums_controller.rb:31:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:45:03 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 31ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/albums_controller.rb:31:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:45:06 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 21ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/albums_controller.rb:31:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:46:10 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (2.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 149ms (Views: 99.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:46:12 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 46ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/albums_controller.rb:32:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:48:42 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 4ms
+
+NameError (undefined local variable or method `root' for #<AlbumsController:0x440ca48>):
+  app/controllers/albums_controller.rb:30:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:48:58 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 19ms
+
+NoMethodError (undefined method `exits?' for "../../../albums":String):
+  app/controllers/albums_controller.rb:31:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:49:31 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 56ms
+
+Errno::ENOENT (No such file or directory - ../../../albums):
+  app/controllers/albums_controller.rb:32:in `initialize'
+  app/controllers/albums_controller.rb:32:in `new'
+  app/controllers/albums_controller.rb:32:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:49:49 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 42ms
+
+Errno::ENOENT (No such file or directory - ../../albums):
+  app/controllers/albums_controller.rb:32:in `initialize'
+  app/controllers/albums_controller.rb:32:in `new'
+  app/controllers/albums_controller.rb:32:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:50:07 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 72ms
+
+Errno::ENOENT (No such file or directory - ../albums):
+  app/controllers/albums_controller.rb:32:in `initialize'
+  app/controllers/albums_controller.rb:32:in `new'
+  app/controllers/albums_controller.rb:32:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (85.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:52:20 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 55ms
+
+NoMethodError (undefined method `mkdir_p' for #<AlbumsController:0x4410c48>):
+  app/controllers/albums_controller.rb:33:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:52:44 -0600
+  Processing by AlbumsController#new as HTML
+Rendered albums/_form.html.erb (11.0ms)
+Rendered albums/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 94ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2010-11-26 18:52:52 -0600
+  Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "album"=>{"name"=>"Album3"}, "commit"=>"Create Album"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (8.0ms)[0m  describe `albums`
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO `albums` (`name`) VALUES ('Album3')[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/albums/3
+Completed 302 Found in 78ms
+
+
+Started GET "/albums/3" for 127.0.0.1 at 2010-11-26 18:52:52 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlbum Load (0.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 3) LIMIT 1[0m
+Rendered albums/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 82ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:52:54 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums`
+Rendered albums/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 151ms (Views: 105.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:53:35 -0600
+  Processing by AlbumsController#new as HTML
+Completed   in 45ms
+
+TypeError (can't convert nil into String):
+  app/controllers/albums_controller.rb:33:in `+'
+  app/controllers/albums_controller.rb:33:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:54:16 -0600
+  Processing by AlbumsController#new as HTML
+Rendered albums/_form.html.erb (10.0ms)
+Rendered albums/new.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 223ms (Views: 163.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2010-11-26 18:54:22 -0600
+  Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "album"=>{"name"=>"Album4"}, "commit"=>"Create Album"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (10.0ms)[0m  describe `albums`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `albums` (`name`) VALUES ('Album4')[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/albums/4
+Completed 302 Found in 126ms
+
+
+Started GET "/albums/4" for 127.0.0.1 at 2010-11-26 18:54:23 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAlbum Load (2.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 4) LIMIT 1[0m
+Rendered albums/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 132ms (Views: 80.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:54:44 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (2.0ms)[0m  SELECT `albums`.* FROM `albums`
+Rendered albums/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 101ms (Views: 70.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:54:47 -0600
+  Processing by AlbumsController#new as HTML
+Rendered albums/_form.html.erb (13.0ms)
+Rendered albums/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 140ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2010-11-26 18:54:53 -0600
+  Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "album"=>{"name"=>"Album5"}, "commit"=>"Create Album"}
+  [1m[36mSQL (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.0ms)[0m  describe `albums`
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO `albums` (`name`) VALUES ('Album5')[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/albums/5
+Completed 302 Found in 91ms
+
+
+Started GET "/albums/5" for 127.0.0.1 at 2010-11-26 18:54:53 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 5) LIMIT 1[0m
+Rendered albums/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 103ms (Views: 66.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:58:21 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT `albums`.* FROM `albums`
+Rendered albums/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 132ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums/1" for 127.0.0.1 at 2010-11-26 18:58:25 -0600
+  Processing by AlbumsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "id"=>"1"}
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 1) LIMIT 1[0m
+Completed   in 43ms
+
+Errno::ENOENT (No such file or directory - ../albums/Album1):
+  app/controllers/albums_controller.rb:88:in `destroy'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.0ms)
+
+
+Started POST "/albums/1" for 127.0.0.1 at 2010-11-26 18:59:27 -0600
+  Processing by AlbumsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "id"=>"1"}
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 1) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (19.0ms)[0m  DELETE FROM `albums` WHERE (`albums`.`id` = 1)
+  [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/albums
+Completed 302 Found in 82ms
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:59:28 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums`
+Rendered albums/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 80ms (Views: 56.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/albums/2" for 127.0.0.1 at 2010-11-26 18:59:31 -0600
+  Processing by AlbumsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "id"=>"2"}
+  [1m[36mAlbum Load (2.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mAREL (1.0ms)[0m  [1mDELETE FROM `albums` WHERE (`albums`.`id` = 2)[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/albums
+Completed 302 Found in 75ms
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:59:32 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 108ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums/3" for 127.0.0.1 at 2010-11-26 18:59:35 -0600
+  Processing by AlbumsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "id"=>"3"}
+  [1m[35mAlbum Load (2.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 3) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.0ms)[0m  DELETE FROM `albums` WHERE (`albums`.`id` = 3)
+  [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/albums
+Completed 302 Found in 77ms
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:59:35 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT `albums`.* FROM `albums`
+Rendered albums/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 87ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums/4" for 127.0.0.1 at 2010-11-26 18:59:39 -0600
+  Processing by AlbumsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "id"=>"4"}
+  [1m[36mAlbum Load (0.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  BEGIN
+  [1m[36mAREL (0.0ms)[0m  [1mDELETE FROM `albums` WHERE (`albums`.`id` = 4)[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/albums
+Completed 302 Found in 120ms
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:59:39 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 74ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums/5" for 127.0.0.1 at 2010-11-26 18:59:43 -0600
+  Processing by AlbumsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "id"=>"5"}
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 5) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.0ms)[0m  DELETE FROM `albums` WHERE (`albums`.`id` = 5)
+  [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/albums
+Completed 302 Found in 75ms
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:59:44 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums`
+Rendered albums/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 75ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 18:59:46 -0600
+  Processing by AlbumsController#new as HTML
+Rendered albums/_form.html.erb (11.0ms)
+Rendered albums/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 293ms (Views: 127.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2010-11-26 18:59:50 -0600
+  Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "album"=>{"name"=>"Album1"}, "commit"=>"Create Album"}
+  [1m[36mSQL (2.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.0ms)[0m  describe `albums`
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO `albums` (`name`) VALUES ('Album1')[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/albums/6
+Completed 302 Found in 117ms
+
+
+Started GET "/albums/6" for 127.0.0.1 at 2010-11-26 18:59:50 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAlbum Load (6.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 6) LIMIT 1[0m
+Rendered albums/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 121ms (Views: 51.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 18:59:53 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums`
+Rendered albums/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 130ms (Views: 92.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/albums/6" for 127.0.0.1 at 2010-11-26 19:00:23 -0600
+  Processing by AlbumsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "id"=>"6"}
+  [1m[36mAlbum Load (3.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 6) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mAREL (2.0ms)[0m  [1mDELETE FROM `albums` WHERE (`albums`.`id` = 6)[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/albums
+Completed 302 Found in 81ms
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 19:00:24 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 132ms (Views: 77.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 19:00:35 -0600
+  Processing by AlbumsController#new as HTML
+Rendered albums/_form.html.erb (10.0ms)
+Rendered albums/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 141ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2010-11-26 19:00:39 -0600
+  Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "album"=>{"name"=>"Album1"}, "commit"=>"Create Album"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (11.0ms)[0m  [1mdescribe `albums`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `albums` (`name`) VALUES ('Album1')
+  [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/albums/7
+Completed 302 Found in 89ms
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:00:39 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Rendered albums/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 118ms (Views: 74.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 19:01:09 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 114ms (Views: 77.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 19:02:50 -0600
+  Processing by AlbumsController#new as HTML
+Rendered albums/_form.html.erb (56.0ms)
+Rendered albums/new.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 183ms (Views: 138.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2010-11-26 19:02:54 -0600
+  Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "album"=>{"name"=>"Album1"}, "commit"=>"Create Album"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.`id` FROM `albums` WHERE (`albums`.`name` = BINARY 'Album1') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+Rendered albums/_form.html.erb (18.0ms)
+Rendered albums/new.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 489ms (Views: 100.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 19:03:02 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 197ms (Views: 81.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 19:03:04 -0600
+  Processing by AlbumsController#new as HTML
+Rendered albums/_form.html.erb (11.0ms)
+Rendered albums/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 160ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2010-11-26 19:03:05 -0600
+  Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "album"=>{"name"=>""}, "commit"=>"Create Album"}
+  [1m[35mSQL (1.0ms)[0m  BEGIN
+  [1m[36mAlbum Load (0.0ms)[0m  [1mSELECT `albums`.`id` FROM `albums` WHERE (`albums`.`name` = BINARY '') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  ROLLBACK
+Rendered albums/_form.html.erb (6.0ms)
+Rendered albums/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 104ms (Views: 56.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 19:03:07 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 123ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2010-11-26 19:05:07 -0600
+  Processing by AlbumsController#new as HTML
+Rendered albums/_form.html.erb (32.0ms)
+Rendered albums/new.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 211ms (Views: 160.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2010-11-26 19:05:12 -0600
+  Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "album"=>{"name"=>"Album2"}, "commit"=>"Create Album"}
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.`id` FROM `albums` WHERE (`albums`.`name` = BINARY 'Album2') LIMIT 1[0m
+  [1m[35mSQL (8.0ms)[0m  describe `albums`
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO `albums` (`name`) VALUES ('Album2')[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/albums/8
+Completed 302 Found in 128ms
+
+
+Started GET "/albums/8" for 127.0.0.1 at 2010-11-26 19:05:13 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAlbum Load (2.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 8) LIMIT 1[0m
+Rendered albums/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 121ms (Views: 73.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 19:05:28 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums`
+Rendered albums/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 126ms (Views: 82.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/albums/8" for 127.0.0.1 at 2010-11-26 19:05:31 -0600
+  Processing by AlbumsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EMCB4nRE7l4bxRd5Mq1Y4MvgKMFs6tXACDpYsIoMYWY=", "id"=>"8"}
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 8) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  BEGIN
+  [1m[36mAREL (0.0ms)[0m  [1mDELETE FROM `albums` WHERE (`albums`.`id` = 8)[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/albums
+Completed 302 Found in 78ms
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 19:05:32 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (19.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 162ms (Views: 51.0ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:19:56 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Rendered albums/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 217ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:20:19 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1[0m
+Completed   in 92ms
+
+Errno::ENOENT (No such file or directory - ../albums/Album1/pictures):
+  app/controllers/albums_controller.rb:23:in `chdir'
+  app/controllers/albums_controller.rb:23:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (19.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (207.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:20:28 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Completed   in 103ms
+
+Errno::ENOENT (No such file or directory - ../albums/Album1/pictures):
+  app/controllers/albums_controller.rb:23:in `chdir'
+  app/controllers/albums_controller.rb:23:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2010-11-26 19:21:23 -0600
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums`[0m
+Rendered albums/index.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 221ms (Views: 170.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:21:30 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Completed   in 35ms
+
+Errno::ENOENT (No such file or directory - ../albums/Album1/pictures):
+  app/controllers/albums_controller.rb:24:in `chdir'
+  app/controllers/albums_controller.rb:24:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:21:59 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (2.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1[0m
+Completed   in 38ms
+
+Errno::ENOENT (No such file or directory - ../albums/Album1):
+  app/controllers/albums_controller.rb:23:in `chdir'
+  app/controllers/albums_controller.rb:23:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:22:17 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Completed   in 24ms
+
+Errno::ENOENT (No such file or directory - ../albums/):
+  app/controllers/albums_controller.rb:23:in `chdir'
+  app/controllers/albums_controller.rb:23:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (23.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:22:18 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1[0m
+Completed   in 17ms
+
+Errno::ENOENT (No such file or directory - ../albums/):
+  app/controllers/albums_controller.rb:23:in `chdir'
+  app/controllers/albums_controller.rb:23:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:22:18 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Completed   in 15ms
+
+Errno::ENOENT (No such file or directory - ../albums/):
+  app/controllers/albums_controller.rb:23:in `chdir'
+  app/controllers/albums_controller.rb:23:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:22:19 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1[0m
+Completed   in 37ms
+
+Errno::ENOENT (No such file or directory - ../albums/):
+  app/controllers/albums_controller.rb:23:in `chdir'
+  app/controllers/albums_controller.rb:23:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:28:51 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Completed   in 26ms
+
+Errno::ENOENT (No such file or directory - ../albums/):
+  app/controllers/albums_controller.rb:23:in `chdir'
+  app/controllers/albums_controller.rb:23:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:29:24 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (2.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1[0m
+Completed   in 52ms
+
+Errno::ENOENT (No such file or directory - ../albums/):
+  app/controllers/albums_controller.rb:24:in `chdir'
+  app/controllers/albums_controller.rb:24:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:29:38 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Rendered albums/show.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 121ms (Views: 74.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:30:27 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (3.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1[0m
+Rendered albums/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 217ms (Views: 63.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:31:34 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSQL (0.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Rendered albums/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 356ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:33:43 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1[0m
+Rendered albums/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 185ms (Views: 91.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:34:24 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Completed   in 153ms
+
+NameError (uninitialized constant AlbumsController::Rail):
+  app/controllers/albums_controller.rb:23:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:34:33 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1[0m
+Rendered albums/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 160ms (Views: 61.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:37:15 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Rendered albums/show.html.erb within layouts/application (146.0ms)
+Completed   in 307ms
+
+ActionView::Template::Error (undefined method `will_paginate' for #<#<Class:0x437e290>:0x437c9a0>):
+    5:   <%= @album.name %>
+    6: </p>
+    7: 
+    8: <%= will_paginate @pictures %>
+    9: 
+    10: <%= link_to 'Edit', edit_album_path(@album) %> |
+    11: <%= link_to 'Back', albums_path %>
+  app/views/albums/show.html.erb:8:in `_app_views_albums_show_html_erb__590152310_35380416__119191726'
+  app/controllers/albums_controller.rb:29:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (47.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:41:40 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1[0m
+Completed   in 62ms
+
+NoMethodError (undefined method `paginate' for #<Array:0x4283dd8>):
+  app/controllers/albums_controller.rb:27:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:43:47 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mAlbum Load (2.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Completed   in 83ms
+
+NameError (uninitialized constant AlbumsController::WillPaginate):
+  app/controllers/albums_controller.rb:27:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:45:03 -0600
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT `albums`.* FROM `albums` WHERE (`albums`.`id` = 7) LIMIT 1
+Completed   in 255ms
+
+NameError (uninitialized constant AlbumsController::WillPaginate):
+  app/controllers/albums_controller.rb:27:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2010-11-26 19:50:14 -0600
+
+LoadError (no such file to load -- will_paginate/finder):
+  app/controllers/albums_controller.rb:6:in `<class:AlbumsController>'
+  app/controllers/albums_controller.rb:1:in `<top (required)>'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)

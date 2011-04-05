@@ -1,0 +1,12 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%= "paginate_albums.html" %>
+<img src="/images/albums/Album1/pictures/Tulips.jpg" />
+<ol>
+  <% for post in @page_results -%>
+    <li><img src="../albums/<%= (@album.name.to_s) + "/pictures/" + post.to_s %>"/></li>
+  <% end -%>
+</ol>

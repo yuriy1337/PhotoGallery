@@ -5,14 +5,13 @@
   <%= @album.name %>
 </p>
 
-<ol>
-<% for post in @page_results -%>
-<li>Render `results` in some nice way.</li>
-<% end -%>
-</ol>
+<div id="events_container">
+  <%= render :partial => 'paginate_albums' %>
+</div>
+    <p>Now let's render us some pagination!</p>
+    <%= will_paginate @page_results, :renderer => "RemoteLinkRenderer",:remote => { :update => "events_container", :loading => visual_effect(:appear, "loader"),:complete =>visual_effect(:fade,"loader" ) } %>
 
-<p>Now let's render us some pagination!</p>
-<%= will_paginate @page_results %>
+    <%= will_paginate @page_results, :renderer => 'RemoteLinkRenderer' , :remote => {:with =>"'page='+#{params['page']}" , :update =>"events_container"} %>
 
 <%= link_to 'Edit', edit_album_path(@album) %> |
 <%= link_to 'Back', albums_path %>

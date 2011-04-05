@@ -3,6 +3,8 @@ class AlbumsController < ApplicationController
   # GET /albums.xml
 
   require 'FileUtils'
+  require 'will_paginate'
+  require 'remote_link_renderer'
 
   ROOT = "../"
   ALBUMS_ROOT = "../albums/"
@@ -25,12 +27,7 @@ class AlbumsController < ApplicationController
     Dir.chdir(ALBUMS_ROOT + @album.name + "/pictures")
     @pictures = Dir.glob("*")
 
-    @page_results = WillPaginate::Collection.create(0, 4, @pictures.total_results) do |pager|
-      start = (0-1)*4 # assuming current_page is 1 based.
-      pager.replace(@posts.to_array[start, 4])
-    end
-
-    @page_results = @pictures.paginate(0, 4)
+    @page_results = @pictures.paginate(:page=>params['page'], :per_page => 4)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -108,5 +105,15 @@ class AlbumsController < ApplicationController
       format.html { redirect_to(albums_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def paginate_albums
+    @album = Album.new(params[:album])
+    Dir.chdir(Rails.root)
+    Dir.chdir(ALBUMS_ROOT + @album.name + "/pictures")
+    @pictures = Dir.glob("*")
+
+    @page_results = @pictures.paginate(:page=>params['page'], :per_page => 4)
+    render :partial => 'paginate_albums'
   end
 end

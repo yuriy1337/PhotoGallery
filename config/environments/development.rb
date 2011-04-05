@@ -22,5 +22,8 @@ PhotoGallery::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
+  #config.gem 'will_paginate', :version => '~> 2.3.15', :source => 'http://gemcutter.org'
+  #config.gem 'mislav-will_paginate', :lib => 'will_paginate', :version => '~> 3.0'
 end
 
